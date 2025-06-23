@@ -1,0 +1,212 @@
+[
+    {
+        "model": "web_app.Devices",
+        "pk": 1,
+        "fields": {
+            "name": "Пристрій 1"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 2,
+        "fields": {
+            "name": "Пристрій 2"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 3,
+        "fields": {
+            "name": "Пристрій 3"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 4,
+        "fields": {
+            "name": "Пристрій 4"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 5,
+        "fields": {
+            "name": "Пристрій 5"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 6,
+        "fields": {
+            "name": "Пристрій 6"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 7,
+        "fields": {
+            "name": "Пристрій 7"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 8,
+        "fields": {
+            "name": "Пристрій 8"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 9,
+        "fields": {
+            "name": "Пристрій 9"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 10,
+        "fields": {
+            "name": "Пристрій 10"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 11,
+        "fields": {
+            "name": "Пристрій 11"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 12,
+        "fields": {
+            "name": "Пристрій 12"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 13,
+        "fields": {
+            "name": "Пристрій 13"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 14,
+        "fields": {
+            "name": "Пристрій 14"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 15,
+        "fields": {
+            "name": "Пристрій 15"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 16,
+        "fields": {
+            "name": "Пристрій 16"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 17,
+        "fields": {
+            "name": "Пристрій 17"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 18,
+        "fields": {
+            "name": "Пристрій 18"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 19,
+        "fields": {
+            "name": "Пристрій 19"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 20,
+        "fields": {
+            "name": "Пристрій 20"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 21,
+        "fields": {
+            "name": "Пристрій 21"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 22,
+        "fields": {
+            "name": "Пристрій 22"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 23,
+        "fields": {
+            "name": "Пристрій 23"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 24,
+        "fields": {
+            "name": "Пристрій 24"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 25,
+        "fields": {
+            "name": "Пристрій 25"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 26,
+        "fields": {
+            "name": "Пристрій 26"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 27,
+        "fields": {
+            "name": "Пристрій 27"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 28,
+        "fields": {
+            "name": "Пристрій 28"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 29,
+        "fields": {
+            "name": "Пристрій 29"
+        }
+    },
+    {
+        "model": "web_app.Devices",
+        "pk": 30,
+        "fields": {
+            "name": "Пристрій 30"
+        }
+    }
+]
