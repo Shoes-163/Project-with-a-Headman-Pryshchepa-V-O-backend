@@ -88,3 +88,11 @@ class MetricsViewSet(viewsets.ModelViewSet):
                 )
                 metrics.save
         return Response({'status': 'data generated'})
+    
+    @action(detail=False, methods=['get'])
+    def types(self, request):
+        queryset = Metrics.objects.all().order_by('time')
+        type = request.GET.getlist('type')
+        if len(type):
+            queryset = queryset.filter(type_of_metrics__in=type)
+        return Response(queryset.values())
