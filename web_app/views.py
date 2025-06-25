@@ -16,7 +16,9 @@ class MetricsViewSet(viewsets.ModelViewSet):
     serializer_class = MetricsSerializer
 
     def get_queryset(self):
+        device = self.request.query_params.get('device')
         queryset = Metrics.objects.all().order_by('time')
+        queryset = queryset.filter(device=device)
         start_time = self.request.query_params.get('stime')
         end_time = self.request.query_params.get('etime')
         if start_time is not None:
