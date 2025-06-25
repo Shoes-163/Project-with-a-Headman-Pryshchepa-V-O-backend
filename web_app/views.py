@@ -28,7 +28,7 @@ class MetricsViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['post'])
     def generate_metrics(self, request):
         with transaction.atomic():
-            devices = Devices.objects.all()
+            devices = Devices.objects.all().filter(is_working=True)
             for i in devices:
                 battery_level = randrange(0, 100)
                 metrics = Metrics.objects.create(
@@ -87,7 +87,7 @@ class MetricsViewSet(viewsets.ModelViewSet):
                     value_of_metrics=round(uniform(30, 120), 2),
                 )
                 metrics.save
-        return Response({'status': 'data generated'})
+        return Response({'number of devices, for which data has been generated': len(devices)})
     
     @action(detail=False, methods=['get'])
     def types(self, request):

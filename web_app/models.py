@@ -2,6 +2,7 @@ from django.db import models
 
 class Devices(models.Model):
     name = models.CharField('Назва пристрою', max_length=70)
+    is_working = models.BooleanField(default=True)
 
 class Metrics(models.Model):
     device = models.ForeignKey(Devices, on_delete=models.CASCADE)

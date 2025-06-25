@@ -10,4 +10,4 @@ class DevicesSerializer(serializers.ModelSerializer):
     metrics = MetricsSerializer(many=True, source="metrics_set")
     class Meta:
         model = Devices
-        fields = ['id', 'name', 'metrics']
+        fields = ['id', 'name', 'is_working', 'metrics']
