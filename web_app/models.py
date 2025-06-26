@@ -7,8 +7,6 @@ class Devices(models.Model):
 class Metrics(models.Model):
     device = models.ForeignKey(Devices, on_delete=models.CASCADE)
     time = models.DateTimeField(auto_now_add=True, blank=True)
-    type_of_metrics = models.CharField('Тип метрики', max_length=50)
-    value_of_metrics = models.DecimalField(
-        max_digits=6, decimal_places=2, blank=True
-        )
+    type = models.CharField('Тип метрики', max_length=35)
+    value = models.DecimalField(max_digits=6, decimal_places=2)
     battery_level = models.PositiveSmallIntegerField()

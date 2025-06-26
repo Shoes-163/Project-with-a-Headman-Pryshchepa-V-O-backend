@@ -36,65 +36,66 @@ class MetricsViewSet(viewsets.ModelViewSet):
                 metrics = Metrics.objects.create(
                     device=i,
                     battery_level=battery_level,
-                    type_of_metrics='Температура, °C',
-                    value_of_metrics=round(uniform(-20, 50), 1),
+                    type='temperature',
+                    value=round(uniform(-20, 50), 1),
                 )
                 metrics.save
                 metrics = Metrics.objects.create(
                     device=i,
                     battery_level=battery_level,
-                    type_of_metrics='Вологість, %',
-                    value_of_metrics=randrange(20, 90),
+                    type='humidity',
+                    value=randrange(20, 90),
                 )
                 metrics.save
                 metrics = Metrics.objects.create(
                     device=i,
                     battery_level=battery_level,
-                    type_of_metrics='Рівень освітлення, lx',
-                    value_of_metrics=randrange(0, 1000),
+                    type='illumination',
+                    value=randrange(0, 1000),
                 )
                 metrics.save
                 metrics = Metrics.objects.create(
                     device=i,
                     battery_level=battery_level,
-                    type_of_metrics='Тиск, гПа',
-                    value_of_metrics=randrange(950, 1050),
+                    type='pressure',
+                    value=randrange(950, 1050),
                 )
                 metrics.save
                 metrics = Metrics.objects.create(
                     device=i,
                     battery_level=battery_level,
-                    type_of_metrics='Якість повітря (PM2.5), мкг/м³',
-                    value_of_metrics=randrange(0, 500),
+                    type='air_quality',
+                    value=randrange(0, 500),
                 )
                 metrics.save
                 metrics = Metrics.objects.create(
                     device=i,
                     battery_level=battery_level,
-                    type_of_metrics='Рівень CO₂ в повітрі, ppm',
-                    value_of_metrics=randrange(400, 2000),
+                    type='carbon_dioxide_level',
+                    value=randrange(400, 2000),
                 )
                 metrics.save
                 metrics = Metrics.objects.create(
                     device=i,
                     battery_level=battery_level,
-                    type_of_metrics='Швидкість вітру, м/с',
-                    value_of_metrics=round(uniform(0, 20), 1),
+                    type='wind_velocity',
+                    value=round(uniform(0, 20), 1),
                 )
                 metrics.save
                 metrics = Metrics.objects.create(
                     device=i,
                     battery_level=battery_level,
-                    type_of_metrics='Рівень шуму, дБ',
-                    value_of_metrics=round(uniform(30, 120), 2),
+                    type='noise_level',
+                    value=round(uniform(30, 120), 2),
                 )
                 metrics.save
-        return Response({'number of devices, for which data has been generated': len(devices)})
+        return Response({'devicesNumber': len(devices),
+                         'metricsNumber': len(devices)*8})
     
     @action(detail=False, methods=['get'])
     def types(self, request):
         queryset = Metrics.objects.all().order_by('time')
         type = request.GET.getlist('type')
         if len(type):
-            queryset = queryset.filter(type_of_metrics__in=type)
+            queryset = queryset.filter(type__in=type)
         return Response(queryset.values())
